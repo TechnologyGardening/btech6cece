@@ -1,6 +1,8 @@
-import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import MyComponent from "./comp1";
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>Hello World 123456!!!!!</StrictMode>
+  <div>
+    <MyComponent />
+  </div>
 );
