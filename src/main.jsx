@@ -1,8 +1,8 @@
 import { createRoot } from "react-dom/client";
-import StateExmp1 from "./lec0201/stateexmp1";
+import TableDisp from "./lec0601/exercise1";
 
 createRoot(document.getElementById("root")).render(
   <div>
-    <StateExmp1 />
+    <TableDisp />
   </div>
 );
