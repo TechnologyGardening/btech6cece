@@ -6,6 +6,11 @@ import { useState } from "react";
 function TableDisp() {
   const [num1, setNum1] = useState(0);
   const [num2, setNum2] = useState(0);
+  const [disp, setDisp] = useState("none");
+  const [btn1, setBtn1] = useState("Show Text");
+  const [btbool, setBtbool] = useState(true);
+  const [tlen, setTlen] = useState(0);
+  const [txt1, setTxt1] = useState("");
   return (
     <div>
       <input
@@ -42,6 +47,32 @@ function TableDisp() {
       {num2}
       <label>=</label>
       {num1 / num2}
+      <br />
+      <button
+        onClick={() => {
+          setBtbool(!btbool);
+          btbool
+            ? (setBtn1("Hide Text"), setDisp(""))
+            : (setBtn1("Show Text"), setDisp("none"));
+        }}
+      >
+        {btn1}
+      </button>
+      <br />
+      <p style={{ display: disp }}>This is a simple text for display</p>
+      <br />
+      <br />
+      <input
+        type="text"
+        value={txt1}
+        onChange={(e) => {
+          setTxt1(e.target.value), setTlen(e.target.value.length);
+        }}
+      />
+      <br />
+      {txt1}
+      <br />
+      {tlen}
     </div>
   );
 }
