@@ -28,3 +28,13 @@ function NewComponent1() {
   );
 }
 export default NewComponent1;
+
+// 1. Create carousel (image changer)
+// using useeffect. Place 4 images
+// in public directory and
+// chnage image at interval of 4
+// seconds
+
+// 2. Implement count down timer
+// using useEffect 5:00 4:59 4:00
+// 3:59 3:00
