@@ -4,13 +4,13 @@ function fetchUser() {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve({ id: 1, name: "John Doe" });
-    }, 10000);
+    }, 5000);
   });
 }
 export function UserProvider({ children }) {
-  const [user, setUser] = React.useState("abc");
+  const [user, setUser] = React.useState({ name: "loading...", id: "9999" });
   React.useEffect(() => {
     fetchUser().then((user) => setUser(user));
-  }, []);
+  });
   return <UserContext.Provider value={user}>{children}</UserContext.Provider>;
 }

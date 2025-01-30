@@ -1,8 +1,12 @@
 import * as React from "react";
 import { UserContext } from "./use_con_exmp1";
-function UserName() {
+export function UserName() {
   const user = React.useContext(UserContext);
-  return <p>Logged in as {user.name}</p>;
+  return (
+    <p>
+      Logged in as {user.name} {user.id}
+    </p>
+  );
 }
 export function Page1() {
   return (
