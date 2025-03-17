@@ -76,7 +76,12 @@ export default function MultipleState() {
       <section>
         <select
           value={selected}
-          onChange={(e) => dispatch({ type: "selectItem", id: e.target.value })}
+          onChange={(e) =>
+            dispatch({
+              type: "selectItem",
+              id: e.target.value,
+            })
+          }
         >
           {options.map((i) => (
             <option key={i.id} value={i.id}>
